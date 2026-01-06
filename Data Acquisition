@@ -1,0 +1,23 @@
+np.random.seed(42)
+
+data_size = 500   # zyada data
+
+data = {
+    "video_id": range(1, data_size + 1),
+    "channel_title": np.random.choice(
+        ["MrBeast", "T-Series", "PewDiePie", "BBC News", "Netflix", "5-Minute Crafts"], 
+        data_size
+    ),
+    "category": np.random.choice(
+        ["Entertainment", "Music", "Gaming", "News", "Education"], 
+        data_size
+    ),
+    "views": np.random.randint(10_000, 5_000_000, data_size),
+    "likes": np.random.randint(500, 300_000, data_size),
+    "dislikes": np.random.randint(0, 20_000, data_size),
+    "publish_date": pd.date_range(start="2023-01-01", periods=data_size, freq="D")
+}
+
+df = pd.DataFrame(data)
+
+df.head()

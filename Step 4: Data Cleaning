@@ -1,0 +1,13 @@
+# Add some missing values intentionally
+df.loc[10:20, 'likes'] = np.nan
+
+# Check missing values
+df.isnull().sum()
+
+# Remove missing values
+df.dropna(inplace=True)
+
+# Remove duplicates if any
+df.drop_duplicates(inplace=True)
+
+df.isnull().sum()

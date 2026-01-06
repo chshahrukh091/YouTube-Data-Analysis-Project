@@ -1,0 +1,33 @@
+📊 Category Distribution
+plt.figure(figsize=(8,5))
+sns.barplot(x=category_count.index, y=category_count.values)
+plt.title("Trending Videos by Category")
+plt.xlabel("Category")
+plt.ylabel("Number of Videos")
+plt.show()
+
+📊 Top Channels Visualization
+plt.figure(figsize=(8,5))
+sns.barplot(x=top_channels.values, y=top_channels.index)
+plt.title("Top Trending YouTube Channels")
+plt.xlabel("Number of Videos")
+plt.ylabel("Channel")
+plt.show()
+
+📊 Views vs Likes
+plt.figure(figsize=(8,5))
+plt.scatter(df['views'], df['likes'], alpha=0.6)
+plt.title("Views vs Likes")
+plt.xlabel("Views")
+plt.ylabel("Likes")
+plt.show()
+
+📊 Engagement Rate by Category
+engagement_by_category = df.groupby('category')['engagement_rate'].mean()
+
+plt.figure(figsize=(8,5))
+sns.barplot(x=engagement_by_category.index, y=engagement_by_category.values)
+plt.title("Average Engagement Rate by Category")
+plt.xlabel("Category")
+plt.ylabel("Engagement Rate")
+plt.show()

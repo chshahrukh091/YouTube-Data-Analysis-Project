@@ -1,0 +1,2 @@
+category_count = df['category'].value_counts()
+category_count

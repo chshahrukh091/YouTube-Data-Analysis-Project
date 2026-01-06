@@ -1,2 +1,11 @@
+🔸 Most Popular Categories
 category_count = df['category'].value_counts()
 category_count
+
+🔸 Top 5 Trending Channels
+top_channels = df['channel_title'].value_counts().head(5)
+top_channels
+
+🔸 Engagement Ratio
+df['engagement_rate'] = (df['likes'] - df['dislikes']) / df['views']
+df[['views', 'likes', 'dislikes', 'engagement_rate']].head()

@@ -1,0 +1,4 @@
+print("Most Popular Category:", category_count.idxmax())
+print("Top Channel:", top_channels.idxmax())
+print("Average Views:", int(df['views'].mean()))
+print("Average Likes:", int(df['likes'].mean()))

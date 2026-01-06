@@ -1,0 +1,2 @@
+comparison = df.groupby('category')[['views', 'likes', 'dislikes']].mean()
+comparison
